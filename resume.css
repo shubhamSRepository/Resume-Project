@@ -1,0 +1,331 @@
+body {
+    margin: 0;
+}
+
+/*BODY HEADER*/
+#body-Header {
+    height: 68vh;
+    background-image: url('https://learn.canva.com/wp-content/uploads/2019/07/20-web-design-principles-to-follow-featured-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+/*HORIZONTAL LIST*/
+.horizontal-list {
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 0px;
+    padding-top: 1rem;
+
+}
+
+.horizontal-list li {
+    /* appling display:inline-block to every <li>*/
+    display: inline-block;
+    margin: 0px 10px 10px 0px;
+}
+
+.horizontal-list a {
+    /* Now we have to change color of elements of list as they are blue.
+    This blue color is due to property of anchor tag so we will now apply 
+    color property on every anchor tag in horizontal list*/
+    color: white;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+
+.horizontal-list a:hover {
+    color: lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.text-center {
+    /* we have made separate class for text which is required to be at center
+    so that we can put all that elements in one class and avoid writing rules
+    again and again*/
+    text-align: center;
+}
+
+#name-social-container {
+    margin-top: 20vh;
+}
+
+#my-name {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.social-icons li a {
+    /* margin: 15px; */
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+.social-icons li a:hover {
+    box-shadow: 0px 0px 6px 4px lightgray;
+    /*parameters of box-shodow-
+    box-shadow:(horizontal-offset, vertical-offset, blur, sprea, color)*/
+}
+
+
+#about {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+#my-image {
+    height: 12rem;
+    width: 12rem;
+    margin: auto;
+    margin-top: -17vh;
+}
+
+#my-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 7px white;
+}
+
+
+#about-para {
+    padding: 0px 15vw 0px 15vw;
+    /* padding: 0px 3rem 0px 3rem; */
+    font-size: 1.2rem;
+    text-align: justify;
+    color: gray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*RULES FOR SECTION*/
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+section:nth-child(2n){
+    background-color: lightgray;
+}
+
+section:nth-child(2n+1){
+    /* section:nth-child is used to give rules to alternative child of a parent
+    by using even and odd*/
+    background-color: white;
+}
+
+section:target{
+    background-color: antiquewhite;
+}
+
+.section-heading span{
+    font-size: 40px;
+    color: rgb(7, 7, 121);
+}
+
+
+/* CSS RULES FOR SKILL SECTION*/
+#skill-display{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#skill-display>div{
+    width: 170px;
+    height: 30px;
+    border: 2px solid black;
+    background-color: darkgrey;
+    border-radius: 1rem;
+    margin: 5vh 2.5vw;
+    overflow: hidden;
+    /* overflow is used to cut area that flows outside of boundary*/
+}
+
+
+.skill-progress {
+    height: inherit; 
+    color: white;
+}
+
+.java-progress{
+    width: 80%;
+    background-color: rgb(56, 56, 98);
+}
+
+.dataStructure-progress{
+    width: 40%;
+    background-color: orangered;
+}
+.html-progress{
+    width: 80%;
+    background-color: rgb(73, 139, 100);
+}
+
+.css-progress{
+    width: 80%;
+    background-color: rgb(136, 45, 45);
+}
+
+.javaScript-progress{
+    width: 60%;
+    background-color: rgb(227, 64, 179);
+}
+.skill-progress span{ 
+    margin-left: 1rem;
+    vertical-align: -5px;
+}
+
+/*RULES FOR WORK EXPERIENCE AND EDUCATION SECTION*/
+
+.experience-education-display{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 0;
+    position:relative;
+}
+
+.inside-box{
+    width:auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%; 
+    font-size: large;
+    letter-spacing: 1px;
+}
+
+.inside-box:nth-child(2n){
+    right: 25%;
+}
+
+.inside-box:nth-child(2n+1){
+    left: 25%;
+}
+
+.divider{
+    position: absolute;
+    width: 0;
+    height: 80%;
+    border: 1px dashed skyblue;
+    top: 10%;
+}
+
+.plane-icon{
+    position: sticky;
+    transform: rotate(90deg);
+    top: 25%;
+}
+
+
+@media screen and (max-width:600px){
+  
+    .inside-box{
+        width:auto;
+        height: auto;
+        position: relative;
+        display: flex;
+        margin-top: 2%;
+        margin-bottom: 2%; 
+        font-size: large;
+        letter-spacing: 1px;
+    }
+    
+    .inside-box:nth-child(2n){
+        right: 0%;
+    }
+    
+    .inside-box:nth-child(2n+1){
+        left: 0%;
+    }
+    
+    .divider{
+        position: absolute;
+        left: 15%;
+        width: 0;
+        height: 80%;
+        border: 1px dashed skyblue;
+        top: 10%;
+    }
+
+}
+
+
+
+/* RULES FOR PORTFOLIO SECTION*/
+
+#portfolio-container{
+    display: flex;
+    width: 80%;
+    height: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-image-container {
+    
+    max-width: 320px;
+   margin: 5% 0;
+}
+
+.portfolio-image-container img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*  CSS RULES FOR CONTACT SECTION */
+#contact{
+    padding: 10px;
+    display: flex;
+    background-image: linear-gradient(to right,rgb(52, 52, 162),rgb(71, 41, 75));
+}
+
+#contact-display{
+    display: flex;
+    width: 60%;
+    
+    height:auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#contact-display div{
+    width: 40%;
+    min-width: 300px;
+    margin: 10% 0px;
+    color: white;  
+}
+
+#contact-form input, textarea{
+    border-bottom: 1px solid white;
+    width: 90%;
+    background-color:transparent;
+    margin: 5%;
+}
+
+#contact-form button{
+    background: transparent;
+    margin-left: 36%;
+    color: white;
+    border-color: white;
+}
+
