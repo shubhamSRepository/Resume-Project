@@ -107,6 +107,8 @@ body {
     color: gray;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+
 /*RULES FOR SECTION*/
 section{
     display: flex;
@@ -294,6 +296,7 @@ section:target{
 /*  CSS RULES FOR CONTACT SECTION */
 #contact{
     padding: 10px;
+    padding-bottom: 130px;
     display: flex;
     background-image: linear-gradient(to right,rgb(52, 52, 162),rgb(71, 41, 75));
 }
